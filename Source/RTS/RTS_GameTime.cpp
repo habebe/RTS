@@ -9,12 +9,22 @@ URTS_GameTime::URTS_GameTime():TimeScale(0)
 
 void URTS_GameTime::Initialize(float timeScale,const FDateTime& dateTime)
 {
-	this->TimeScale = timeScale;
+	this->SetTimescale(timeScale);
+	this->SetInitialDateTime(dateTime);
+	this->SetCurrentDateTime(dateTime);
+}
+
+void URTS_GameTime::SetInitialDateTime(const FDateTime& dateTime)
+{
 	this->Initial = dateTime;
+}
+
+void URTS_GameTime::SetCurrentDateTime(const FDateTime& dateTime)
+{
 	this->Current = dateTime;
 }
 
-void URTS_GameTime::UpdateTimescale(float timeScale)
+void URTS_GameTime::SetTimescale(float timeScale)
 {
 	this->TimeScale = timeScale;
 }

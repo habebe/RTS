@@ -20,9 +20,15 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "RTS|GameTime")
     void Initialize(float timeScale,const FDateTime& dateTime);
+    
+    UFUNCTION(BlueprintCallable, Category = "RTS|GameTime")
+    void SetInitialDateTime(const FDateTime& dateTime);
 
     UFUNCTION(BlueprintCallable, Category = "RTS|GameTime")
-    void UpdateTimescale(float timeScale);
+    void SetCurrentDateTime(const FDateTime& dateTime);
+
+    UFUNCTION(BlueprintCallable, Category = "RTS|GameTime")
+    void SetTimescale(float timeScale);
 
     UFUNCTION(BlueprintCallable, Category = "RTS|GameTime")
     void UpdateTime(float seconds);
